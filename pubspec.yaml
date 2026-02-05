@@ -1,5 +1,5 @@
 name: dart_lab1
-description: A sample command-line application.
+description: Dart Programming Lab 1 - School Management System
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
@@ -9,6 +9,7 @@ environment:
 # Add regular dependencies here.
 dependencies:
   path: ^1.9.0
+  ansicolor: ^2.0.3
 
 dev_dependencies:
   lints: ^6.0.0
