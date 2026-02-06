@@ -3,4 +3,4 @@
 /// Any class that implements Registrable MUST define registerCourse().
 abstract class Registrable {
   void registerCourse(String courseName);
-}
+} 
