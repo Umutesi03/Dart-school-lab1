@@ -2,6 +2,9 @@ import 'package:ansicolor/ansicolor.dart';
 import 'attendance.dart';
 import 'notification.dart';
 
+/// Q11:
+/// Student class uses mixins to gain additional behavior
+/// without extending multiple classes.
 class Student with AttendanceMixin, NotificationMixin {
   String name;
   int age;
@@ -19,13 +22,15 @@ class Student with AttendanceMixin, NotificationMixin {
 
 void main() {
   ansiColorDisabled = false;
-  AnsiPen greenBold = AnsiPen()..green(bold: true);
-  AnsiPen yellowBold = AnsiPen()..yellow(bold: true);
-  AnsiPen cyanBold = AnsiPen()..cyan(bold: true);
+
+  final greenBold = AnsiPen()..green(bold: true);
+  final yellowBold = AnsiPen()..yellow(bold: true);
+  final cyanBold = AnsiPen()..cyan(bold: true);
 
   print(cyanBold('\n=== Q11: Student with AttendanceMixin ===\n'));
 
-  Student student1 = Student('Habimana Moise', 20);
+  // Student 1
+  final student1 = Student('Habimana Moise', 20);
   print(greenBold('═══ Student 1 ═══'));
   student1.displayInfo();
   student1.registerForCourse('Mobile App Development');
@@ -35,12 +40,11 @@ void main() {
   student1.markAttendance();
   student1.markAttendance();
 
-  print('');
-
   print('\n');
 
-  Student student2 = Student('Shimwamubyeyi Fortune', 21);
-  print(greenBold('═══ Student 3 ═══'));
+  // Student 2
+  final student2 = Student('Shimwamubyeyi Fortune', 21);
+  print(greenBold('═══ Student 2 ═══'));
   student2.displayInfo();
   student2.registerForCourse('Mobile App Development');
 
@@ -48,6 +52,4 @@ void main() {
   student2.markAttendance();
   student2.markAttendance();
   student2.markAttendance();
-
-  print('');
 }
