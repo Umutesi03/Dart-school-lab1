@@ -1,12 +1,15 @@
 import 'list.dart';
+
 void main() {
+  // Creating a Map where key = student ID, value = Student object
+  Map<int, Student> studentMap = {
+    for (var student in students) student.id: student
+  };
 
-Map<int, Student> studentMap = {
-for (var student in students) student.id: student
-};
+  print('\n === Student Names === \n');
 
-print('\n === Student Names === \n');
-for (var student in studentMap.values) {
-print(student.name);
-}
+  // Iterating over all values (Student objects) and printing names
+  for (var student in studentMap.values) {
+    print(student.name);
+  }
 }
